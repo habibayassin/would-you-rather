@@ -13,7 +13,7 @@ const PollCard = ({poll, author}) => {
           <h3>{author.name} asks</h3>
           <div>Would you rather</div>
           <div>{poll.optionOne.text}</div>
-          <Link to={`/poll/${poll['id']}`}>
+          <Link to={`/questions/${poll['id']}`}>
             <button>View Poll</button>
           </Link>
         </div>

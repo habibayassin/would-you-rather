@@ -33,7 +33,7 @@ const NewPoll = ({loggedOut, handleAddQuestion}) => {
 
       }
 
-      let to = '/new'
+      let to = '/add'
     if (loggedOut) {
       return <Redirect to={{
         pathname: '/',

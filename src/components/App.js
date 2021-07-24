@@ -21,8 +21,8 @@ class App extends Component {
     <div className="container">
       <NavBar />
       <Route exact path='/home' component={Dashboard} />
-      <Route path='/poll/:id' component={Poll} />
-      <Route exact path='/new' component={NewPoll} />
+      <Route path='/questions/:question_id ' component={Poll} />
+      <Route exact path='/add' component={NewPoll} />
       <Route exact path='/leaderboard' component={Leaderboard} />
     </div>
 
@@ -39,8 +39,8 @@ class App extends Component {
           <Switch>
           <Route exact path='/' component={Login} /> 
           <Route exact path='/home' component={Dashboard} />
-          <Route exact path='/poll/:id' component={Poll} />
-          <Route exact path='/new' component={NewPoll} />
+          <Route exact path='/questions/:question_id' component={Poll} />
+          <Route exact path='/add' component={NewPoll} />
           <Route exact path='/leaderboard' component={Leaderboard} />
           <Route component={NotFound} />
           </Switch>

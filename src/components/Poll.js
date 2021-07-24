@@ -27,7 +27,7 @@ const Poll = ({id, poll, author, handleAnswer, loggedOut}) => {
 
     console.log("debug issue: ", id)
     //let location = useLocation();
-    let to = `/poll/${id}`
+    let to = `/questions/${id}`
     if (loggedOut) {
 
       console.log("helloooooooooooooooooooooooo",to)
@@ -103,7 +103,8 @@ const Poll = ({id, poll, author, handleAnswer, loggedOut}) => {
 };
 
 function mapStateToProps({ authedUser, users, polls }, props) {
-    const { id } = props.match.params;
+    const { question_id } = props.match.params;
+    let id = question_id
     const poll = polls[id];
     const author = poll ? users[poll.author] : null;
   
